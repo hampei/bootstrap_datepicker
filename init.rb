@@ -1,1 +1,1 @@
-require 'jquery_datepicker'
+require 'bootstrap_datepicker'

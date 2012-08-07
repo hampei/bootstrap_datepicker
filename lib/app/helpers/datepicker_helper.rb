@@ -1,9 +1,9 @@
 require 'app/helpers/form_helper'
 
-module JqueryDatepicker
+module BootstrapDatepicker
   module DatepickerHelper
 
-    include JqueryDatepicker::FormHelper
+    include BootstrapDatepicker::FormHelper
 
     # Helper method that creates a datepicker input field
     def datepicker_input(object_name, method, options = {})

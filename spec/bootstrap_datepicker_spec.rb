@@ -4,13 +4,13 @@ require 'app/helpers/datepicker_helper'
 require 'app/helpers/form_helper'
 require 'date'
 
-ActionView::Base.send(:include, JqueryDatepicker::DatepickerHelper)
-ActionView::Helpers::FormBuilder.send(:include,JqueryDatepicker::FormBuilder)
+ActionView::Base.send(:include, BootstrapDatepicker::DatepickerHelper)
+ActionView::Helpers::FormBuilder.send(:include,BootstrapDatepicker::FormBuilder)
 
 current_value = Time.now
 current_value_date = Date.current
 
-describe JqueryDatepicker do
+describe BootstrapDatepicker do
 
    let :valid_nested_response_input do
       "<input id=\"foo_var_att1\" name=\"foo[var][att1]\" size=\"30\" type=\"text\" />"
@@ -32,7 +32,7 @@ describe JqueryDatepicker do
       "<script type=\"text/javascript\">\n//<![CDATA[\njQuery(document).ready(function(){jQuery('#foo_att1').datetimepicker({})});\n//]]>\n</script>"
     end
     
-  describe JqueryDatepicker::DatepickerHelper, :type => :view do
+  describe BootstrapDatepicker::DatepickerHelper, :type => :view do
 
     let :datepicker_input_template do
         <<-EOTEMPLATE
@@ -188,7 +188,7 @@ describe JqueryDatepicker do
 
   end
 
-  describe JqueryDatepicker::FormHelper, :type => :view do
+  describe BootstrapDatepicker::FormHelper, :type => :view do
 
     let :foo do
       Foo.new
@@ -242,24 +242,24 @@ describe JqueryDatepicker do
 
   end
   
-  describe JqueryDatepicker::InstanceTag do
+  describe BootstrapDatepicker::InstanceTag do
     it "should return a valid format when translating yy-mm-dd" do
-      input_tag =  JqueryDatepicker::InstanceTag.new("test", "method", "aux")
+      input_tag =  BootstrapDatepicker::InstanceTag.new("test", "method", "aux")
       input_tag.translate_format("yy-mm-dd").should eq("%Y-%m-%d")
     end
     
     it "should return a valid format when translating mm-dd-yy" do
-      input_tag =  JqueryDatepicker::InstanceTag.new("test", "method", "aux")
+      input_tag =  BootstrapDatepicker::InstanceTag.new("test", "method", "aux")
       input_tag.translate_format("mm-dd-yy").should eq("%m-%d-%Y")
     end
     
     it "should return a valid format when translating m-d-y" do
-      input_tag =  JqueryDatepicker::InstanceTag.new("test", "method", "aux")
+      input_tag =  BootstrapDatepicker::InstanceTag.new("test", "method", "aux")
       input_tag.translate_format("m-d-y").should eq("%-m-%-d-%y")
     end
     
     it "should return a valid format when translating yy/m-dd" do
-      input_tag =  JqueryDatepicker::InstanceTag.new("test", "method", "aux")
+      input_tag =  BootstrapDatepicker::InstanceTag.new("test", "method", "aux")
       input_tag.translate_format("yy/m-dd").should eq("%Y/%-m-%d")
     end
   end
