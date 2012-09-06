@@ -9,7 +9,7 @@ Echoe.new('bootstrap_datepicker', '0.4') do |p|
   p.author         = "Derek Stavis"
   p.email          = "dekestavis@gmail.com"
   p.ignore_pattern = ["tmp/*", "script/*", "spec/*"]
-  p.development_dependencies = []
+  p.development_dependencies = ['twitter-bootstrap-rails']
 end
 
 RSpec::Core::RakeTask.new(:spec)
