@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "bootstrap_datepicker"
-  s.version = "0.4"
+  s.version = "0.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Alberto Pastor", "Derek Willian Stavis"]
@@ -10,10 +10,10 @@ Gem::Specification.new do |s|
   s.description = "View helper that allows to select dates from a calendar (using jQuery and Twitter Bootstrap styles)"
   s.email = "dekestavis@gmail.com"
   s.extra_rdoc_files = ["README.rdoc", "lib/app/helpers/datepicker_helper.rb", "lib/app/helpers/form_helper.rb", "lib/bootstrap_datepicker.rb"]
-  s.files = ["README.rdoc", "Rakefile", "init.rb", "bootstrap_datepicker.gemspec", "lib/app/helpers/datepicker_helper.rb", "lib/app/helpers/form_helper.rb", "lib/bootstrap_datepicker.rb", "lib/engine.rb", "vendor/assets/javascripts/bootstrap-datepicker.js", "vendor/assets/javascripts/index.js", "vendor/assets/stylesheets/datepicker.css", "vendor/assets/stylesheets/datepicker.less"]
+  s.files = ["README.rdoc", "Rakefile", "init.rb", "bootstrap_datepicker.gemspec", "lib/app/helpers/datepicker_helper.rb", "lib/app/helpers/form_helper.rb", "lib/bootstrap_datepicker.rb", "lib/engine.rb", "vendor/assets/javascripts/bootstrap-datepicker.js", "vendor/assets/javascripts/index.js", "vendor/assets/stylesheets/bootstrap-datepicker.css"]
 
   s.homepage = "http://github.com/derekstavis/bootstrap_datepicker"
-  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Bootstrap_datepicker", "--main", "README.rdoc"]
+  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "bootstrap_datepicker", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
   s.rubyforge_project = "bootstrap_datepicker"
   s.rubygems_version = "1.8.10"
