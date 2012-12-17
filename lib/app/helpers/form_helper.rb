@@ -43,21 +43,27 @@ class BootstrapDatepicker::InstanceTag < ActionView::Helpers::InstanceTag
   end
   
   def available_datepicker_options
-    [:format, :week_start, :view_mode, :min_view_mode, :class]
+    [:format, :week_start, :view_mode, :min_view_mode]
+  end
+
+  def available_html_attributes
+    [:class, :value, :maxlength]
   end
   
   def baked_options(options)
     tf_options = Hash.new
     
     options.each do |key, value|
+
       if available_datepicker_options.include? key
-        if key.to_s === "class"
-          tf_options[key.to_s] = value
-        else
-          new_key = ("data-" << key.to_s)
-          tf_options[new_key] = value
-        end
+        new_key = ("data-" << key.to_s)
+        tf_options[new_key] = value
       end
+
+      if available_html_attributes.include? key
+          tf_options[key.to_s] = value
+      end
+
     end
     
     puts 'options' 
