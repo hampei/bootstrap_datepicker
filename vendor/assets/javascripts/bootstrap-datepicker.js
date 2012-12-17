@@ -18,7 +18,18 @@
  * ========================================================= */
 
  $(function() {
- 	$('.datetime_select').datepicker({})
+ 	$('.datetime_select').each(function(index, element) { 
+ 		attributes = $(element).data()
+
+ 		console.log(attributes)
+
+ 		delete attributes.datepicker
+
+ 		console.log(attributes)
+
+ 		$(element).datepicker(attributes)
+ 	})
+
  })
  
 !function( $ ) {
