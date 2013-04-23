@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "bootstrap_datepicker"
   s.rubygems_version = "1.8.10"
   s.summary = "View helper that allows to select dates from a calendar (using jQuery and Twitter Bootstrap styles)"
-  s.add_dependency "twitter-bootstrap-rails", "~> 2.1.1"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
