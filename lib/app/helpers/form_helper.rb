@@ -30,7 +30,7 @@ module BootstrapDatepicker::FormBuilder
   end
 end
 
-class BootstrapDatepicker::InstanceTag < ActionView::Helpers::InstanceTag
+class BootstrapDatepicker::InstanceTag < ActionView::Helpers::Tags::Base
 
   FORMAT_REPLACEMENTES = { "yy" => "%Y", "mm" => "%m", "dd" => "%d", "d" => "%-d", "m" => "%-m", "y" => "%y", "M" => "%b"}
   
